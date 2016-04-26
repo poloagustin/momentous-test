@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "outFile": "app.js",
+        "removeComments": true
+    },  
+    "exclude": [
+        "node_modules",
+        "wwwroot",
+        "typings"
+    ]
+}

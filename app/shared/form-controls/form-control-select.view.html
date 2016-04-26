@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label for="{{name}}">{{label}}</label>
+    <select class="form-control" name="{{name}}" ng-required="required" ng-model="model" ng-options="option.name for option in options track by option.id">
+        <option value="">Select a value</option>
+    </select>
+    <mt-form-control-error-required label="label" max-length="required" field="field"></mt-form-control-error-max-length>
+</div>
