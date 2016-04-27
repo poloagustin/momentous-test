@@ -1,5 +1,9 @@
 #Momentous Test
 This repository holds the implementation for the test from Momentous Technologies.
+
+#Disclaimer
+This project was developed with Typescript. The implementation is mostly written in a proper ES5 manner, with minor pieces of TS for intellisence purposes.
+
 #Author:
 ###Agustin Polo
 
@@ -56,3 +60,15 @@ The schema for an activity is as follows:
 * **date** - *Date* - The date of the activity.
 * **status** - *number* - The status of the activity. **0** for *'Pending Activities'* and **1** for *'Completed Activities'*.
 * **qty** - *number* - The amount of activities.
+
+#Examples
+##Directive
+[app/shared/form-controls/form-control-select.directive.ts](https://github.com/poloagustin/momentous-test/blob/master/app/shared/form-controls/form-control-select.directive.ts)
+##Controller
+[app/components/projects/projects-index.controller.ts](https://github.com/poloagustin/momentous-test/blob/master/app/components/projects/projects-index.controller.ts)
+##Service
+[app/shared/services/utilities.service.ts](https://github.com/poloagustin/momentous-test/blob/master/app/shared/services/utilities.service.ts)
+##Expression
+[app/components/projects/index.view.html](https://github.com/poloagustin/momentous-test/blob/master/app/components/projects/index.view.html)
+##Routing
+[app/routes.ts](https://github.com/poloagustin/momentous-test/blob/master/app/routes.ts)
