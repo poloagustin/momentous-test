@@ -10,7 +10,7 @@
             vm.activities = [[], []];
             vm.data = [{}, {}];
             vm.labels = [];
-            vm.series = ['Act. Estimadas', 'Act. Realizadas'];
+            vm.series = ['Pending Activities', 'Completed Activities'];
             vm.options = {
                 chart: {
                     type: 'lineChart',
