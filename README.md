@@ -13,15 +13,15 @@ Otherwise, open a command prompt and go to the directory where the app is.
 
     npm install
     
+4. Run the following command.
+
+    .\node_modules\.bin\tsd install
+    
 4. Run the following command to create all the neccessary files.
 
     gulp
     
-5. Run the following command to install the tools neccesary for the project.
+5. Run the following command to run the server.
 
-    npm install -g http-server
-
-6. Run the following command to run the server.
-
-    http-server
+    .\node_modules\.bin\http-server
     
