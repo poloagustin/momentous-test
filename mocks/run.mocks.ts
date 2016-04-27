@@ -5,13 +5,17 @@
 
     onRun.$inject = ['$httpBackend', 'ProjectsService'];
 
-    function onRun($httpBackend: angular.IHttpBackendService, ProjectsService: IProjectsService) {
+    function onRun($httpBackend, ProjectsService: IProjectsService) {
         $httpBackend.whenGET('api/projects').respond(returnProjects);
 
-        $httpBackend.whenGET('api/projects/:id').respond(returnProject);
+        $httpBackend.whenRoute('GET', 'api/projects/:projectId/activities').respond(getActivities);
+
+        $httpBackend.whenRoute('GET', 'api/projects/:id').respond(returnProject);
 
         $httpBackend.whenPOST('api/projects').respond(addProject);
 
+        $httpBackend.whenRoute('PUT', 'api/projects/:id').respond(udpateProject);
+        
         $httpBackend.whenGET(/^app\//).passThrough();
         $httpBackend.whenGET(/^assets\//).passThrough();
 
@@ -24,8 +28,19 @@
             return [project === null ? 401 : 200, project];
         }
 
-        function addProject(project: IProject) {
-            ProjectsService.add(project);
+        function addProject(method, url, project: string, headers, params) {
+            ProjectsService.add(angular.fromJson(project));
+            return [200, project];
+        }
+
+        function udpateProject(method, url, project: string, headers, params) {
+            ProjectsService.edit(params.id, angular.fromJson(project));
+            return [200, project];
+        }
+        
+        function getActivities(method, url, project: string, headers, params) {
+            var act = ProjectsService.getActivities(params.projectId);
+            return [200, act];
         }
     }
 } ());

@@ -14,14 +14,40 @@
                 templateUrl: 'app/components/projects/index.view.html'
             }).state('projects.create', {
                 url: '/create',
-                controller: 'ProjectsCreateController',
-                controllerAs: 'projectsCreateVm',
-                templateUrl: 'app/components/projects/create.view.html'
+                views: {
+                    'content': {
+                        controller: 'ProjectsCreateController',
+                        controllerAs: 'projectsVm',
+                        templateUrl: 'app/components/projects/form.view.html'
+                    }
+                }
             }).state('projects.edit', {
                 url: '/:id',
-                controller: 'ProjectsEditController',
-                controllerAs: 'projectsEditVm',
-                templateUrl: 'app/components/projects/edit.view.html'
+                views: {
+                    'content': {
+                        controller: 'ProjectsEditController',
+                        controllerAs: 'projectsVm',
+                        templateUrl: 'app/components/projects/form.view.html'
+                    }
+                }
+            }).state('projects.details', {
+                url: '/:id/details',
+                views: {
+                    'content': {
+                        controller: 'ProjectsDetailsController',
+                        controllerAs: 'projectsVm',
+                        templateUrl: 'app/components/projects/details.view.html'
+                    }
+                }
+            }).state('projects.activities', {
+                url: '/:projectId/activities',
+                views: {
+                    'content': {
+                        controller: 'ProjectsActivitiesController',
+                        controllerAs: 'projectsVm',
+                        templateUrl: 'app/components/projects/activities.view.html'
+                    }
+                }
             }).state('onConstruction', {
                 url: '/on-construction',
                 controller: 'OnConstructionController',

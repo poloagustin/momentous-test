@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for="{{name}}">{{label}}</label>
-    <textarea class="form-control" name="{{name}}" ng-required="required" ng-maxlength="maxLength" ng-model="model"></textarea>
+    <textarea class="form-control" name="{{name}}" ng-required="required" maxlength="{{maxLength}}" ng-model="model"></textarea>
     <mt-form-control-error-max-length label="label" max-length="maxLength" field="field"></mt-form-control-error-max-length>
     <mt-form-control-error-required label="label" max-length="required" field="field"></mt-form-control-error-max-length>
 </div>

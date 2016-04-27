@@ -10,7 +10,11 @@
         var params = {
             id: '@id'
         };
-        var actions = {};
+        var actions = {
+            update: {
+                method: 'PUT'
+            }
+        };
 
         return $resource(url, params, actions);
     }

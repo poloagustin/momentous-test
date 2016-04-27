@@ -13,9 +13,10 @@
             label: '@',
             required: '=',
             model: '=',
-            field: '='
+            field: '=',
+            options: '='
         };
 
         return directive;
     }
-})
+} ());

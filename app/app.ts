@@ -4,8 +4,11 @@
     angular.module('momentousTest', [
         'ui.router',
         'ui.bootstrap',
+        'ui.bootstrap.modal',
         'ngResource',
         'ngAnimate',
-        'toastr'
+        'toastr',
+        'nvd3',
+        'ngLodash'
     ]);
-}());
+} ());

@@ -1,0 +1,19 @@
+<nvd3 options="projectsVm.options" data="projectsVm.data"></nvd3>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th ng-repeat="label in projectsVm.labels">
+                {{label | date: 'dd/MM/yyyy'}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="i in [0, 1]">
+            <td>{{projectsVm.series[i]}}</td>
+            <td ng-repeat="e in projectsVm.data[i].values">
+                <input class="form-control" ng-model="e.qty" type="number" />
+            </td>
+        </tr>
+    </tbody>
+</table>

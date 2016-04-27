@@ -2,12 +2,162 @@
 
 (function () {
     var projects = [
-        { id: 0, name: 'Project000' },
-        { id: 1, name: 'Project001' },
-        { id: 2, name: 'Project002' },
-        { id: 3, name: 'Project003' },
-        { id: 4, name: 'Project004' },
-        { id: 5, name: 'Project005' },
+        {
+            id: 0,
+            name: 'Project000',
+            description: 'Project000Description',
+            notes: '',
+            relatedRfi: '',
+            status: { id: 0, name: 'Pending' },
+            activities: [
+                { date: new Date(2016, 1, 1), status: 0, qty: 6 },
+                { date: new Date(2016, 1, 2), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 3), status: 0, qty: 7 },
+                { date: new Date(2016, 1, 4), status: 0, qty: 3 },
+                { date: new Date(2016, 1, 5), status: 0, qty: 2 },
+                { date: new Date(2016, 1, 6), status: 0, qty: 8 },
+                { date: new Date(2016, 1, 7), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 8), status: 0, qty: 9 },
+                { date: new Date(2016, 1, 1), status: 1, qty: 4 },
+                { date: new Date(2016, 1, 2), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 3), status: 1, qty: 5 },
+                { date: new Date(2016, 1, 4), status: 1, qty: 6 },
+                { date: new Date(2016, 1, 5), status: 1, qty: 1 },
+                { date: new Date(2016, 1, 6), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 7), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 8), status: 1, qty: 8 },
+            ]
+        },
+        {
+            id: 1,
+            name: 'Project001',
+            description: 'Project001Description',
+            notes: '',
+            relatedRfi: '',
+            status: { id: 0, name: 'Pending' },
+            activities: [
+                { date: new Date(2016, 1, 1), status: 0, qty: 6 },
+                { date: new Date(2016, 1, 2), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 3), status: 0, qty: 7 },
+                { date: new Date(2016, 1, 4), status: 0, qty: 3 },
+                { date: new Date(2016, 1, 5), status: 0, qty: 2 },
+                { date: new Date(2016, 1, 6), status: 0, qty: 8 },
+                { date: new Date(2016, 1, 7), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 8), status: 0, qty: 9 },
+                { date: new Date(2016, 1, 1), status: 1, qty: 4 },
+                { date: new Date(2016, 1, 2), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 3), status: 1, qty: 5 },
+                { date: new Date(2016, 1, 4), status: 1, qty: 6 },
+                { date: new Date(2016, 1, 5), status: 1, qty: 1 },
+                { date: new Date(2016, 1, 6), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 7), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 8), status: 1, qty: 8 },
+            ]
+        },
+        {
+            id: 2,
+            name: 'Project002',
+            description: 'Project002Description',
+            notes: '',
+            relatedRfi: '',
+            status: { id: 0, name: 'Pending' },
+            activities: [
+                { date: new Date(2016, 1, 1), status: 0, qty: 6 },
+                { date: new Date(2016, 1, 2), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 3), status: 0, qty: 7 },
+                { date: new Date(2016, 1, 4), status: 0, qty: 3 },
+                { date: new Date(2016, 1, 5), status: 0, qty: 2 },
+                { date: new Date(2016, 1, 6), status: 0, qty: 8 },
+                { date: new Date(2016, 1, 7), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 8), status: 0, qty: 9 },
+                { date: new Date(2016, 1, 1), status: 1, qty: 4 },
+                { date: new Date(2016, 1, 2), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 3), status: 1, qty: 5 },
+                { date: new Date(2016, 1, 4), status: 1, qty: 6 },
+                { date: new Date(2016, 1, 5), status: 1, qty: 1 },
+                { date: new Date(2016, 1, 6), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 7), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 8), status: 1, qty: 8 },
+            ]
+        },
+        {
+            id: 3,
+            name: 'Project003',
+            description: 'Project003Description',
+            notes: '',
+            relatedRfi: '',
+            status: { id: 0, name: 'Pending' },
+            activities: [
+                { date: new Date(2016, 1, 1), status: 0, qty: 6 },
+                { date: new Date(2016, 1, 2), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 3), status: 0, qty: 7 },
+                { date: new Date(2016, 1, 4), status: 0, qty: 3 },
+                { date: new Date(2016, 1, 5), status: 0, qty: 2 },
+                { date: new Date(2016, 1, 6), status: 0, qty: 8 },
+                { date: new Date(2016, 1, 7), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 8), status: 0, qty: 9 },
+                { date: new Date(2016, 1, 1), status: 1, qty: 4 },
+                { date: new Date(2016, 1, 2), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 3), status: 1, qty: 5 },
+                { date: new Date(2016, 1, 4), status: 1, qty: 6 },
+                { date: new Date(2016, 1, 5), status: 1, qty: 1 },
+                { date: new Date(2016, 1, 6), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 7), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 8), status: 1, qty: 8 },
+            ]
+        },
+        {
+            id: 4,
+            name: 'Project004',
+            description: 'Project004Description',
+            notes: '',
+            relatedRfi: '',
+            status: { id: 0, name: 'Pending' },
+            activities: [
+                { date: new Date(2016, 1, 1), status: 0, qty: 6 },
+                { date: new Date(2016, 1, 2), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 3), status: 0, qty: 7 },
+                { date: new Date(2016, 1, 4), status: 0, qty: 3 },
+                { date: new Date(2016, 1, 5), status: 0, qty: 2 },
+                { date: new Date(2016, 1, 6), status: 0, qty: 8 },
+                { date: new Date(2016, 1, 7), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 8), status: 0, qty: 9 },
+                { date: new Date(2016, 1, 1), status: 1, qty: 4 },
+                { date: new Date(2016, 1, 2), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 3), status: 1, qty: 5 },
+                { date: new Date(2016, 1, 4), status: 1, qty: 6 },
+                { date: new Date(2016, 1, 5), status: 1, qty: 1 },
+                { date: new Date(2016, 1, 6), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 7), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 8), status: 1, qty: 8 },
+            ]
+        },
+        {
+            id: 5,
+            name: 'Project005',
+            description: 'Project005Description',
+            notes: '',
+            relatedRfi: '',
+            status: { id: 0, name: 'Pending' },
+            activities: [
+                { date: new Date(2016, 1, 1), status: 0, qty: 6 },
+                { date: new Date(2016, 1, 2), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 3), status: 0, qty: 7 },
+                { date: new Date(2016, 1, 4), status: 0, qty: 3 },
+                { date: new Date(2016, 1, 5), status: 0, qty: 2 },
+                { date: new Date(2016, 1, 6), status: 0, qty: 8 },
+                { date: new Date(2016, 1, 7), status: 0, qty: 4 },
+                { date: new Date(2016, 1, 8), status: 0, qty: 9 },
+                { date: new Date(2016, 1, 1), status: 1, qty: 4 },
+                { date: new Date(2016, 1, 2), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 3), status: 1, qty: 5 },
+                { date: new Date(2016, 1, 4), status: 1, qty: 6 },
+                { date: new Date(2016, 1, 5), status: 1, qty: 1 },
+                { date: new Date(2016, 1, 6), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 7), status: 1, qty: 3 },
+                { date: new Date(2016, 1, 8), status: 1, qty: 8 },
+            ]
+        },
     ];
 
     angular.module('momentousTestE2E').service('ProjectsService', ProjectsService);
@@ -29,16 +179,19 @@
         svc.add = add;
         svc.edit = edit;
         svc.get = get;
+        svc.getActivities = getActivities;
 
         function add(project: IProject) {
+            project.id = svc.projects.length;
             svc.projects.push(project);
+            localStorageService.set(PROJECTS_KEY, svc.projects)
         }
 
         function edit(id: number, project: IProject) {
             for (var i = 0; i < svc.projects.length; i++) {
-                var p = svc.projects[i];
-                if (p.id == id) {
-                    p = project;
+                if (svc.projects[i].id == id) {
+                    svc.projects[i] = project;
+                    localStorageService.set(PROJECTS_KEY, svc.projects)
                     break;
                 }
             }
@@ -54,6 +207,17 @@
 
             return null;
         }
+
+        function getActivities(id) {
+            for (var i = 0; i < svc.projects.length; i++) {
+                var p = svc.projects[i];
+                if (p.id == id) {
+                    return p.activities;
+                }
+            }
+
+            return null;
+        }
     }
 } ());
 
@@ -62,4 +226,5 @@ interface IProjectsService {
     get(id: any): IProject;
     edit(id: any, project: IProject);
     add(project: IProject);
+    getActivities(projectId: any);
 }

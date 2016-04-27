@@ -3,16 +3,18 @@
 (function () {
     angular.module('momentousTest').controller('ProjectsIndexController', ProjectsIndexController);
 
-    ProjectsIndexController.$inject = ['$state', 'ProjectsResource', 'UtilitiesService'];
+    ProjectsIndexController.$inject = ['$state', 'ProjectsResource', 'UtilitiesService', '$modal'];
 
-    function ProjectsIndexController($state: angular.ui.IStateService, ProjectsResource: IProjectsResource, UtilitiesService: IUtilitiesService) {
+    function ProjectsIndexController($state: angular.ui.IStateService, ProjectsResource: IProjectsResource, UtilitiesService: IUtilitiesService, $modal) {
         var vm = this;
 
         (function () {
             vm.projects = [];
-            vm.filter = '';
+            vm.filter = {
+            };
 
             vm.go = $state.go;
+            vm.openFilter = openFilter;
 
             fetchProjects();
         } ());
@@ -29,5 +31,28 @@
             }
         }
 
+        function openFilter() {
+            var backupFilter = vm.filter;
+            $modal.open({
+                templateUrl: 'app/shared/project-filter/index.view.html',
+                controller: 'ProjectFilterController',
+                controllerAs: 'projectFilterVm',
+                bindToController: true,
+                resolve: {
+                    filter: function () {
+                        return vm.filter;
+                    }
+                }
+            }).result
+                .then(onSuccess, onCancel);
+
+            function onSuccess(filter) {
+                vm.filter = filter;
+            }
+
+            function onCancel() {
+                vm.filter = backupFilter;
+            }
+        }
     }
 } ());

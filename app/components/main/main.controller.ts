@@ -7,7 +7,11 @@
         var vm = this;
 
         (function () {
-            vm.user = {};
+            vm.user = {
+                username: 'Agustin Polo',
+                role: 'Administrator',
+                imageUrl: 'assets/user_male2-512.png'
+            };
 
             vm.go = $state.go;
 

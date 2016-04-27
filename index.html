@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/angular-toastr/dist/angular-toastr.min.css">
+    <link rel="stylesheet" href="node_modules/nvd3/build/nv.d3.min.css">
 </head>
 
 <body ng-app="momentousTestE2E" ng-controller="MainController as mainVm" ng-cloak>
@@ -20,7 +21,7 @@
                 <span class="fa fa-home"></span>
             </a>
         </div>
-        <div class="navbar-collapse" uib-collapse="mainVm.collapseNavbar">
+        <div class="navbar-collapse" collapse="mainVm.collapseNavbar">
             <ul class="nav navbar-nav">
                 <li ng-class="{active: true}">
                     <a class="" href="" ui-sref="projects()">Projects</a>
@@ -54,7 +55,7 @@
                         Access: {{mainVm.user.role}}
                     </span>
                 </div>
-                <img class="pull-right" ng-src="https://scontent-atl3-1.xx.fbcdn.net/hprofile-xlp1/v/t1.0-1/p100x100/13007079_10209588697060208_3725635759248224977_n.jpg?oh=128fc044c32c0fc7944792528221ed2c&oe=57A82085"
+                <img class="pull-right" ng-src="{{mainVm.user.imageUrl}}"
                     alt="{{mainVm.user.username}}" height="50px"/>
             </div>
         </div>
@@ -75,6 +76,10 @@
     <script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="node_modules/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="node_modules/ng-lodash/build/ng-lodash.min.js"></script>
+    <script src="node_modules/d3/d3.min.js"></script>
+    <script src="node_modules/nvd3/build/nv.d3.min.js"></script>
+    <script src="node_modules/angular-nvd3/dist/angular-nvd3.min.js"></script>
 
     <script src="dist/app.js"></script>
 </body>

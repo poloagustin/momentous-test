@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h3 class="modal-title">Filter</h3>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" name="name" ng-model="projectFilterVm.filter.name" />
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control" name="description" ng-model="projectFilterVm.filter.description" />
+    </div>
+    <div class="form-group">
+        <label for="status">Status</label>
+        <select class="form-control" name="status" ng-model="projectFilterVm.filter.status" ng-options="option.name for option in projectFilterVm.availableStatus track by option.id">
+            <option value="">Select a value</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="relatedRfi">Related RFI</label>
+        <input class="form-control" name="relatedRfi" ng-model="projectFilterVm.filter.relatedRfi" />
+    </div>
+    <div class="form-group">
+        <label for="notes">Notes</label>
+        <input class="form-control" name="notes" ng-model="projectFilterVm.filter.notes" />
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="projectFilterVm.close(projectFilterVm.filter)">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="projectFilterVm.dismiss('cancel')">Cancel</button>
+</div>

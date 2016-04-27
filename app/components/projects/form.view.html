@@ -1,12 +1,12 @@
 <form name="projectForm" ng-submit="projectsVm.createProject()">
     <h1>{{projectsVm.action}} Project</h1>
-    <mt-form-control-text field="projectForm.name" name="name" label="Name" is-required="true" model="projectsVm.project.name" max-length="10"></mt-form-control-text>
-    <mt-form-control-text field="projectForm.description" name="description" label="Description" is-required="true" model="projectsVm.project.description"
+    <mt-form-control-text field="projectForm.name" name="name" label="Name" required="true" model="projectsVm.project.name" max-length="10"></mt-form-control-text>
+    <mt-form-control-text field="projectForm.description" name="description" label="Description" required="true" model="projectsVm.project.description"
         max-length="100"></mt-form-control-text>
-    <mt-form-control-select field="projectForm.status" name="status" label="Status" is-required="true" model="projectsVm.project.status" options="projectsVm.availableStatus"></mt-form-control-select>
-    <mt-form-control-text field="projectForm.relatedRfi" name="relatedRfi" label="Related RFI" is-required="false" model="projectsVm.project.relatedRfi"
+    <mt-form-control-select field="projectForm.status" name="status" label="Status" required="true" model="projectsVm.project.status" options="projectsVm.availableStatus"></mt-form-control-select>
+    <mt-form-control-text field="projectForm.relatedRfi" name="relatedRfi" label="Related RFI" required="false" model="projectsVm.project.relatedRfi"
         max-length="100"></mt-form-control-text>
-    <mt-form-control-text-area field="projectForm.notes" name="notes" label="Notes" is-required="false" model="projectsVm.project.notes" max-length="2024"></mt-form-control-text-area>
+    <mt-form-control-text-area field="projectForm.notes" name="notes" label="Notes" required="false" model="projectsVm.project.notes" max-length="2024"></mt-form-control-text-area>
     <button class="btn btn-danger" ng-click="projectsVm.cancelForm()">Cancel</button>
-    <input type="submit" class="btn btn-primary" ng-click="projectsVm.submitForm()" />
+    <input type="submit" class="btn btn-primary" ng-click="projectsVm.submitForm()" value="{{projectsVm.action}}" ng-disabled="projectForm.$invalid"/>
 </form>

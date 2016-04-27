@@ -2,17 +2,17 @@
     <ul class="nav nav-sidebar">
         <li class="sidebar-search">
             <div class="input-group custom-search-form">
-                <input type="text" class="form-control" placeholder="Search..." ng-model="projectsIndexVm.filter" />
+                <input type="text" class="form-control" placeholder="Search..." ng-model="projectsIndexVm.filter.name" />
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" ng-disabled="true">
-                            <i class="fa fa-search"></i>
+                    <button class="btn btn-default" type="button" ng-click="projectsIndexVm.openFilter()">
+                            <i class="fa fa-filter"></i>
                         </button>
                 </span>
             </div>
         </li>
-        <li ng-repeat="project in projectsIndexVm.projects | filter: projectsIndexVm.filter">
+        <li ng-repeat="project in projectsIndexVm.projects | filter: {name: projectsIndexVm.filter.name, description: projectsIndexVm.filter.description, relatedRfi: projectsIndexVm.filter.relatedRfi, notes: projectsIndexVm.filter.notes, status: projectsIndexVm.filter.status}">
             <a href="" ui-sref="projects.details({id: project.id})" class="col-sm-8">{{project.name}}</a>
-            <a href="" ui-sref="projects.activities({id: project.id})" class="col-sm-1">
+            <a href="" ui-sref="projects.activities({projectId: project.id})" class="col-sm-1">
                 <i class="fa fa-bar-chart"></i>
             </a>
             <a href="" ui-sref="projects.edit({id: project.id})" class="col-sm-1">
@@ -27,6 +27,6 @@
         </li>
     </ul>
 </div>
-<div class="container">
+<div class="col-sm-9 col-md-10 container">
     <ui-view name="content">
 </div>

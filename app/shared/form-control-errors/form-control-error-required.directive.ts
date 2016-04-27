@@ -7,7 +7,7 @@
         var directive: angular.IDirective = {};
 
         directive.restrict = 'E';
-        directive.templateUrl = 'app/shared/form-control-errors/form-control-error-max-length.view.html';
+        directive.templateUrl = 'app/shared/form-control-errors/form-control-error-required.view.html';
         directive.scope = {
             label: '=',
             required: '=',
