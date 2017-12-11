@@ -10,20 +10,19 @@ This project was developed with Typescript. The implementation is mostly written
 # Instructions
 1. Make sure you have [NodeJS](https://nodejs.org/en/) installed on the machine.
 
-2. If you have unzipped the code, you are all set. Go to step **6** ;)
-Otherwise, open a command prompt and go to the directory where the app is.
-
-3. Run the following command to install the application dependencies.
+2. Run the following command to install the application dependencies.
 
     npm install
     
-4. Run the following command.
+3. Run the following command.
 
     npm run build
     
-5. Run the following command to run the server.
+4. Run the following command to run the server.
 
     npm start
+
+5. Browse `http://localhost:8080`
     
 # API:
 The application expects a REST API to be hosted in the same domain as the angular application.
