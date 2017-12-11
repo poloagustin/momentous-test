@@ -19,15 +19,11 @@ Otherwise, open a command prompt and go to the directory where the app is.
     
 4. Run the following command.
 
-    .\node_modules\.bin\tsd install
-    
-4. Run the following command to create all the neccessary files.
-
-    gulp
+    npm run build
     
 5. Run the following command to run the server.
 
-    .\node_modules\.bin\http-server
+    npm start
     
 # API:
 The application expects a REST API to be hosted in the same domain as the angular application.

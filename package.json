@@ -4,7 +4,11 @@
   "description": "This application allows you to manage the company projects",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "tsd-install": "tsd install",
+    "gulp": "gulp",
+    "build": "tsd install && gulp",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
