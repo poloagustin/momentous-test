@@ -1,13 +1,13 @@
-#Momentous Test
+# Momentous Test
 This repository holds the implementation for the test from Momentous Technologies.
 
-#Disclaimer
+# Disclaimer
 This project was developed with Typescript. The implementation is mostly written in a proper ES5 manner, with minor pieces of TS for intellisence purposes.
 
-#Author:
+# Author:
 ###Agustin Polo
 
-#Instructions
+# Instructions
 1. Make sure you have [NodeJS](https://nodejs.org/en/) installed on the machine.
 
 2. If you have unzipped the code, you are all set. Go to step **6** ;)
@@ -29,7 +29,7 @@ Otherwise, open a command prompt and go to the directory where the app is.
 
     .\node_modules\.bin\http-server
     
-#API:
+# API:
 The application expects a REST API to be hosted in the same domain as the angular application.
 This API needs the following resources:
 * **GET** - *api/projects*
@@ -61,14 +61,14 @@ The schema for an activity is as follows:
 * **status** - *number* - The status of the activity. **0** for *'Pending Activities'* and **1** for *'Completed Activities'*.
 * **qty** - *number* - The amount of activities.
 
-#Examples
-##Directive
+# Examples
+## Directive
 [app/shared/form-controls/form-control-select.directive.ts](https://github.com/poloagustin/momentous-test/blob/master/app/shared/form-controls/form-control-select.directive.ts)
-##Controller
+## Controller
 [app/components/projects/projects-index.controller.ts](https://github.com/poloagustin/momentous-test/blob/master/app/components/projects/projects-index.controller.ts)
-##Service
+## Service
 [app/shared/services/utilities.service.ts](https://github.com/poloagustin/momentous-test/blob/master/app/shared/services/utilities.service.ts)
-##Expression
+## Expression
 [app/components/projects/index.view.html](https://github.com/poloagustin/momentous-test/blob/master/app/components/projects/index.view.html)
-##Routing
+## Routing
 [app/routes.ts](https://github.com/poloagustin/momentous-test/blob/master/app/routes.ts)
